@@ -1,10 +1,11 @@
+import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 
 def build_cwola_dataframe(df_sr, df_sb):
     return (
-        df_sr.append(df_sb, ignore_index=True)
+        pd.concat([df_sr, df_sb], axis=0)
         .sample(frac=1.0, random_state=42)
         .reset_index(drop=True)
     )
