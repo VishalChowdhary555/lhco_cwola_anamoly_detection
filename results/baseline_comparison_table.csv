@@ -1,0 +1,5 @@
+Method,AUC
+Random baseline,0.5
+Isolation Forest,0.58
+Autoencoder (VAE),0.64
+CWoLa,0.71
